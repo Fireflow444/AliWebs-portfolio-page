@@ -1,0 +1,18 @@
+Color combination:
+bg-color:#02061F;
+into-line-symbol-color:#3BDDEF;
+js-icon-drop-shadow-color:#20F30D;
+practice-box-bgcolor:#1E1E1E;
+practice-box heading-color:#D9D9D9;
+practice-linkboxs-bgcolor:#D9D9D9;
+practice-linkboxs-color:#1E1E1E;
+footer-bg-color:#555;
+footer-main-link-color:#3BDDEF;
+
+Font family:
+1.logo-font-family:@import url('https://fonts.googleapis.com/css?family=Itim');  font-family: 'Itim', cursive; .
+2.hero-big-img-fotn-family:@import url('https://fonts.googleapis.com');   font-family: 'Irish Grover', cursive; .
+3.intro section-font-family:@import url('https://fonts.googleapis.com');    font-family: 'Inclusive Sans', sans-serif;  . 
+4.practice-heading font-family:@import url('https://fonts.googleapis.com');    font-family: 'Indie Flower', cursive; .
+5.practices link-box-font-family:@import url('https://fonts.googleapis.com');    font-family: 'Inclusive Sans', sans-serif;  
+6.footer links-font-family:@import url('https://fonts.googleapis.com');    font-family: 'Inclusive Sans', sans-serif;   

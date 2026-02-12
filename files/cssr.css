@@ -1,0 +1,99 @@
+/* ==========================================
+   RESPONSIVE & ANIMATION ADJUSTMENTS
+   ========================================== */
+
+/* 1. Tablets aur Choti Screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+    section {
+        flex-direction: row; 
+        gap: 50px;
+        padding: 60px 40px;
+        text-align: center;
+    }
+
+    .img-box {
+        margin: 0 auto;
+    }
+
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+}
+
+/* 2. Mobile Phones (max-width: 768px) */
+@media (max-width: 768px) {
+    .hero-section{
+        width:100%;
+        height:500px;
+    }
+    .hero-section img{
+        object-fit: cover;
+    }
+    /* Background and Hero Adjustments */
+    section{
+            flex-direction: column;
+    }
+    .hero-section h1 {
+        font-size: 2.2rem;
+        padding: 0 15px;
+        width: 90%;
+    }
+
+    /* Intro Section Adjustments */
+    .intro-heading { font-size: 2rem; }
+    big { font-size: 3.2rem; }
+
+    /* --- Animation Adjustments for Mobile --- */
+    
+    /* Line animation ko mobile width ke mutabiq set kiya */
+    @keyframes moveLine {
+        from { background-position: 0 0; }
+        to { background-position: -100vw 0; }
+    }
+    .line2 {
+        background-size: 100vw 100%; 
+        animation: moveLine 3s linear infinite;
+    }
+
+    /* Floating Logo Animation (movlg) Adjustment */
+    /* Mobile par movement kam kar di taake screen se bahar na jaye */
+    @keyframes movlg {
+        0%   { transform: translateY(0px) translateX(0px); }
+        25%  { transform: translateY(5px) translateX(15px); }
+        50%  { transform: translateX(15px) translateY(-5px); }
+        65%  { transform: translateX(-10px) translateY(15px); }
+        75%  { transform: translateX(10px) translateY(20px); }
+        100% { transform: translateX(0px) translateY(0px); }
+    }
+
+    .lg-logo {
+        width: 60px;
+        right: 10px; /* Right se thoda andar rakha */
+        top: 0;
+    }
+
+    .img-box img:first-child {
+        width: 260px;
+    }
+
+    /* Practice & Footer */
+    .pratice-main-cont { width: 95%; padding: 20px; }
+    .hd-pra { font-size: 2.2rem; }
+
+    .footer-bottom-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .lnk1-3 {
+        flex-direction:row;
+        gap: 10px;
+    }
+}
+
+/* 3. Very Small Phones (max-width: 480px) */
+@media (max-width: 480px) {
+    .hero-section h1 { font-size: 1.8rem; }
+    big { font-size: 2.5rem; }
+    .img-box img:first-child { width: 200px; }
+}

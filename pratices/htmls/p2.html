@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../css/css2.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>practice 2</title>
+
+</head>
+
+<body>
+
+<!--  variable topic-->
+<h2>Variables</h2>
+
+<!-- simple variable type  variable type -->
+<div title="simple variable type">
+	<h3>Var variable</h3>
+<pre>var a=3;             // a=3 mean a equal to 3
+var b=1;        // a=1 mean a equal to 1 
+console.log(a+b)        //this statement is plus the a,b values means 3+1 = 4ans.
+console.log(a+b+4)      //this statement is plus every number in a,b values result 3+1+4 = 8ans.
+</pre>
+
+</div>
+
+<!-- rules naming a variable -->
+<div title="naming varibale rules">
+<h3>Naming a variable</h3>
+<p>Main rule of naming a variable step are given below:</p>
+<ul>
+	<li>Variable name always starts with alphabets or underscore in js.</li>
+	<li>We cannot use space in variable name.</li>
+	<li>Cannot use special symbol ir numbers starting in variable name without underscore for example: @ / - ! + .</li>
+	<li>We use a long vaiable name ,use capitable letter to sperate a var name for example:
+var blockaReasever=1;</li>
+	<li>javascript is basically casesensitive languague means it can prefer exact keyword aur varibale
+<br>for example : boxa,boxA is deferent in javascript.</li>
+</ul>
+</div>
+
+<!-- identifying variable type keyword -->
+<div title="identifying variable name">
+<h3>Identifying variable type</h3>
+<p>If we can identifying a variabel type we use '<i> typeof </i>' keyword,for example:</p>
+<pre>
+	var ab=45;     // this is number
+var st="how are you";  //this is string
+var ft=12.4;   //this is float
+
+
+//then use display this datatype on console using with keyword ' typeof ' 
+// this is basically use in checking a vaiable type this is easy understandable in debugging
+console.log(typeof ab,typeof st,typeof ft)
+</pre>
+
+</div>
+
+<!-- type of variable -->
+<div title="Variabel type topic">
+<h3>Type variable</h3>
+<p>Type of most common variable in javascript are as follow:</p>
+<ol>
+	<li>const.     (this value cannot changed)</li>
+	<li>let.   ( this value is only use in insert code block)</li>
+	<li>var.  (this is simple like box, value is enter and return it)</li>
+	<li>boolean. (this hold true or false value this is basically a decision variable type)</li>
+</ol>
+</div>
+
+<!-- global varibale defination -->
+<div title ="global variable defination">
+<p><i>What is global variable</i></p>
+<p><i>Ans:</i> Global variable are those variable that are decalred on the globaly<br> or starting and without using block code position is called global variable.</p>
+</div>
+
+<!-- block code defination -->
+<div title ="block code defination">
+<p><i>What is block code</i></p>
+<p><i>Ans:</i> the code is writen in two form simple globaly write mean simply write without enclosed brases <br>for exapmle:</p>
+<pre title="simple code">
+	var a=3; 
+var b=1; 
+console.log(a+b)
+console.log(a+b+4)
+</pre>
+<p>if we write code in block satatment we use this brackets <br>for example:</p>
+<pre title="block code">
+ var b=1;  //this variable is declared on the global scope <br>and this is simple code
+ {
+ 	//this code is block code
+let a=6;   
+console.log(a+b);  
+}	
+</pre>
+
+</div>
+
+<!-- d/f b/w var nad let -->
+<div title="Understanding of var and let">
+<h3>var and const d/f:</h3>
+<p>let is not a global variable,We use let variable enclosed the block code statments like enclosed the <i>curly brases</i>.</p>
+<pre title=" let example">
+	var a=56;   //var value is globaly decalred
+{
+let a=6;
+console.log(a+":this is let vlaue") //this a value is 6 
+}
+console.log(a+":this is var vlaue")  //this a value is 56
+</pre>
+
+<p>If we use var in block and global positon we see sequence changing display value</p>
+<pre title=" var example">
+	var a=56;   //var value is globaly decalred
+{
+var a=6;
+console.log(a+":this is let vlaue") //this a value is 6 
+}
+console.log(a+":this is var vlaue")  //this a value is 6
+</pre>
+
+</div>
+
+
+
+</body>
+
+<script src="../js/js2.js"></script>
+</html>
+

@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Indie+Flower&family=Irish+Grover&family=Itim&display=swap');
+/* Variables and Fonts Setup */
+:root {
+    --bg-color: #02061F;
+    --intro-line-color: #3BDDEF;
+    --js-glow-color: rgba(32, 243, 13, 0.4); /* Shadow kam kar diya */
+    --practice-bg: #1E1E1E;
+    --practice-hd-color: #D9D9D9;
+    --link-box-bg: #D9D9D9;
+    --link-box-text: #1E1E1E;
+    --footer-bg: #555;
+    --footer-link-color: #3BDDEF;
+
+
+    --logo-font: 'Itim', cursive;
+    --hero-font: 'Irish Grover', cursive;
+    --body-font: 'Inclusive Sans', sans-serif;
+    --practice-font: 'Indie Flower', cursive;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: white;
+    font-family: var(--body-font);
+    overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+    top:0;
+    position:sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    /*position: absolute;*/
+    width: 100%;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--logo-font);
+}
+
+.logo img { width: 45px; }
+
+.menu-icon { cursor: pointer; }
+.menu-icon img {
+    display: block;
+    width: 30px;
+    margin-bottom: 5px;
+}
+/* hide checkbox */
+#toggle{
+  display:none;
+}
+
+.menu{
+  width:40px;
+  height:40px;
+  cursor:pointer;
+}
+
+/* lines */
+.line{
+  fill:#fff;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+
+/* animation */
+#toggle:checked + svg .top{
+  transform: rotate(45deg) translateY(6px);
+}
+
+#toggle:checked + svg .bottom{
+  transform: rotate(-45deg) translateY(-6px);
+}
+/* Hero Section */
+.hero-section {
+    overflow: hidden;
+    height: 100vh;
+    width:100vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image:url("imgs/coding-img.jpg");
+
+/*position: absolute;*/
+}
+.hero-section img {
+    opacity: 40%;
+    width:100%;
+    height:100%;
+    position: relative;
+    /*object-fit: fill;*/
+}
+.hero-section h1{
+    position:absolute;
+    font-family: var(--hero-font);
+    font-size: 4rem;
+    text-align: center;
+}
+
+/* --- Animated Effect Bar --- */
+.effect-bar {
+    display: flex;
+    height: 8px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.line2 { 
+    width: 100%; 
+
+    background: linear-gradient(90deg, var(--footer-link-color) 50%, transparent 50%);
+    background-size: 50vw 100%;
+    animation: moveLine 5s linear infinite; /* Left side animation */
+}
+
+@keyframes moveLine {
+    from { background-position: 0 0; }
+    to { background-position: -50vw 0; }
+}
+
+/* --- Hidden Sidebar Menu --- */
+.menu-bar {
+    position: fixed; /* Screen ke sath scroll nahi hoga */
+    top: 0;
+    left: -300px; /* Hidden state */
+    width: 300px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 100px 30px;
+    z-index: 200;
+    transition: 0.5s; /* Smooth open/close */
+}
+
+/* Class to open menu via JS */
+.menu-bar.active {
+    left: 0;
+}
+
+
+.main-menu-section {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #fff;
+}
+.menu-bar a{
+    text-decoration: none;
+}
+.menu-bar li:hover{
+    background-color:rgba(225, 225, 225, 0.1);
+    
+}
+.menu-bar li {
+    list-style: none;
+    padding: 15px 10px;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    color: #fff;
+}
+
+/* Intro Section Fixed */
+section {
+    display: flex;
+    justify-content:center; /* Center se hata diya */
+    align-items:center;
+    gap:100px;
+    padding: 100px 80px;
+}
+
+.heading-box {
+
+    border-bottom: 5px solid var(--intro-line-color);
+    padding-bottom: 10px;
+}
+
+.intro-heading {
+    line-height: 40px;
+    font-size: 3rem;
+    line-height: 1;
+}
+font{
+    color:var(--footer-link-color);
+}
+big{
+    font-size: 5rem;
+}
+.img-box { 
+    position: relative; 
+    margin-left: auto; /* Push to right */
+    margin-right: 50px; /* Thoda gap right se */
+}
+
+.img-box img:first-child { width: 350px; }
+
+.lg-logo {
+    position: absolute;
+    top: 5%;
+    right: -20px;
+    width: 80px;
+    filter: drop-shadow(0 0 3px var(--js-glow-color)); /* Shadow balance kar di */
+    animation:movlg 10s ease-in-out infinite;
+}
+@keyframes movlg{
+    0%{transform:translateY(0px) translateX(0px);}
+    25%{transform:translateY(10px) translateX(50px);}
+    50%{transform:translateX(50px) translateY(-10px);}
+    65%{transform:translateX(-20px) translateY(50px);}
+    75%{transform:translateX(20px) translateY(70px);}
+    100%{transform:translateX(0px) translateY(0px);}
+
+}
+
+/* Practice Section */
+.pratice-main-cont {
+    border-radius:20px;
+    background-color: var(--practice-bg);
+    margin: 50px auto;
+    padding: 40px;
+    width: 90%;
+}
+
+.hd-pra {
+    font-family: var(--practice-font);
+    color: var(--practice-hd-color);
+    font-weight: 500;
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+.practice-link-list li {
+    background-color: var(--link-box-bg);
+    margin-bottom: 10px;
+    padding: 15px;
+    list-style: none;
+}
+
+.practice-link-list a {
+    text-decoration: none;
+    color: var(--link-box-text);
+    font-weight: bold;
+    display: block;
+}
+
+/* --- Footer Link Rearrange --- */
+.ft {
+    display: flex;
+    flex-flow: column;
+    gap:100px;
+    background-color: var(--footer-bg);
+    padding: 20px;
+    text-align: center;
+}
+
+.lnk-list {
+    list-style: none;
+}
+
+.lnk-list a {
+    text-decoration: none;
+    font-family: var(--body-font);
+}
+
+.lnk2 a {
+    color: var(--footer-link-color);
+    font-size: 1.1rem; /* Bigger font for Link 2 */
+    font-weight: bold;
+}
+
+.footer-bottom-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.lnk1-3 a{
+font-size:1rem;
+color:var(--link-box-bg);
+}
+.lnk1-3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
