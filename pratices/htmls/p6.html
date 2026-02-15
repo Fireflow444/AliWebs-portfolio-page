@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>dom practice</title>
+</head>
+<body>
+<script>
+	console.assert("you can back the page")
+	console.clear("you can back the page")
+
+	const users = [
+  { id: 1, name: "Alice", role: "Admin" },
+  { id: 2, name: "Bob", role: "User" },
+  { id: 3, name: "Charlie", role: "Editor" }
+];
+console.table(users, ["id","name","role"]);
+	console.log("you can back the page")
+	console.error("you can back the page")
+	console.warn("you can back the page")
+	console.info("you can back the page")
+	console.table("you can back the page")
+
+	let age = 15;
+// Assert that the user must be at least 18
+console.assert(age >= 18, "ERROR: User is under 18!"); 
+
+let v=prompt("enter your name:","Enter you name");
+document.write("<h1>Nice name:"+v+"<br> you are hakced!</h1>");
+</script>
+</body>
+</html>
